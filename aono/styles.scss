@@ -1,0 +1,484 @@
+/*================================================================
+Chrome/Firefox/Edgeなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
+何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
+ブラウザごとの表示の差異をなくすために書くのが「リセットCSS」です。
+================================================================*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+button,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li,
+dd {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+q,
+blockquote {
+  quotes: none;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+
+  line-height: 1.2;
+  font-weight: normal;
+  font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', sans-serif;
+
+}
+
+a:hover {
+
+  opacity: .5;
+
+  transition: .3s;
+
+}
+
+header {
+  height: 800px;
+  background-image: url(images/main.png);
+  background-position: center;
+  background-size: cover;
+
+  .header-nav {
+    img {
+      height: 60px;
+    }
+
+    max-width: 1100px;
+    padding-top: 30px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+
+    .sp-menu {
+      display: none;
+    }
+  }
+
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+
+      li {
+        padding: 0 30px;
+
+        a {
+          text-decoration: none;
+          color: #000000;
+          font-size: 18px;
+        }
+
+      }
+    }
+  }
+
+  p {
+    margin-top: 275px;
+    font-size: 48px;
+    text-align: center;
+  }
+}
+
+main {
+  h2 {
+    text-align: center;
+    font-size: 36px;
+    margin: 90px 0;
+  }
+
+  ul {
+    max-width: 700px;
+    margin: 0 auto;
+
+    li {
+      padding: 20px 0;
+      border-bottom: #000000 1px solid;
+
+      .news {
+        border: 1px solid #000000;
+        padding: 5px 8px;
+        margin: 0 30px;
+      }
+    }
+
+    a {
+      color: #000000;
+      text-decoration: none;
+    }
+  }
+
+
+  .list {
+    margin: 80px 0 180px 0;
+    font-size: 20px;
+    text-align: center;
+
+    a {
+      padding: 12px 40px;
+      border: 1px #000000 solid;
+      text-decoration: none;
+      color: #000000;
+      text-align: center;
+    }
+  }
+
+  .caseStudy-contents {
+    display: flex;
+    justify-content: space-around;
+
+    .caseStudy-content {
+      text-align: center;
+
+      img {
+        width: 430px;
+      }
+
+      h3 {
+        font-size: 24px;
+        margin-top: 30px;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 15px 0;
+      }
+
+      .detail {
+        width: 300px;
+      }
+    }
+  }
+
+  .banner {
+    display: flex;
+
+    a {
+      max-width: calc(100%/3);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+footer{
+  background: #000000;
+  p{
+    color: #FFF;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 10px;
+  }
+  a{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+  }
+  .footer-nav{
+    max-width: 1100px;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    img{
+      height: 39px;
+    }
+  }
+  nav {
+    ul {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+
+      li {
+        padding: 0 30px
+      }
+    }
+  }
+}
+
+
+// スマホ用
+@media screen and (max-width:960px) {
+  header {
+    height: 342px;
+
+    .header-nav {
+      img {
+        height: 26px;
+        margin-right: 20px;
+      }
+
+      max-width: 960px;
+
+      .sp-menu {
+        display: block;
+      }
+    }
+
+    p {
+      margin-top: 113px;
+      font-size: 24px;
+    }
+  }
+
+  nav {
+    display: none;
+  }
+
+  main {
+    h2 {
+      margin: 50px 0 30px 0;
+      font-size: 24px;
+    }
+
+    ul {
+      margin: 0 20px;
+
+      li {
+        .news-span {
+          display: block;
+          margin-bottom: 15px;
+          font-size: 13px;
+
+          .news {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+
+    .caseStudy {
+      .list {
+        margin-bottom: 110px;
+        margin-top: 0;
+      }
+
+      h2 {
+        margin-top: 100px;
+      }
+
+      .caseStudy-contents {
+        padding: 0 20px;
+        display: block;
+
+        .caseStudy-content {
+          display: block;
+          text-align: center;
+
+          img {
+            width: 100%;
+          }
+
+          h3 {
+            font-size: 20px;
+            margin-top: 30px;
+          }
+
+          p {
+            font-size: 12px;
+            margin: 15px 0;
+          }
+
+          .detail {
+            width: 300px;
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+
+    .banner {
+      display: block;
+    }
+  }
+  footer{
+    .footer-nav{
+      flex-direction: column-reverse;
+      padding-top: 32px;
+      padding-bottom: 20px;
+      img{
+        margin-top: 29px;
+      }
+      nav{
+        display: block;
+      }
+      ul{
+        display: block;
+        text-align: center;
+        li{
+          margin-bottom: 21px;
+        }
+      }
+      a{
+        text-decoration: none;
+        color: #FFF;
+        text-align: center;
+      }
+    }
+    p{
+      padding-bottom: 15px;
+    }
+  }
+
+}

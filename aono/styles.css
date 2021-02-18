@@ -1,0 +1,474 @@
+@charset "UTF-8";
+/*================================================================
+Chrome/Firefox/Edgeなど、各ブラウザはそれぞれデフォルトで効くCSSを持っています。
+何もしないと見え方が微妙に変わるので、デフォルトのCSSをリセットして
+ブラウザごとの表示の差異をなくすために書くのが「リセットCSS」です。
+================================================================*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+button,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+li,
+dd {
+  list-style-type: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption,
+th,
+td {
+  font-weight: normal;
+  text-align: left;
+  vertical-align: middle;
+}
+
+q,
+blockquote {
+  quotes: none;
+}
+
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+  line-height: 1.2;
+  font-weight: normal;
+  font-family: 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'Yu Mincho Light', 'YuMincho', 'Yu Mincho', '游明朝体', sans-serif;
+}
+
+a:hover {
+  opacity: .5;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+header {
+  height: 800px;
+  background-image: url(images/main.png);
+  background-position: center;
+  background-size: cover;
+}
+
+header .header-nav {
+  max-width: 1100px;
+  padding-top: 30px;
+  padding-left: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+header .header-nav img {
+  height: 60px;
+}
+
+header .header-nav .sp-menu {
+  display: none;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+header nav ul li {
+  padding: 0 30px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 18px;
+}
+
+header p {
+  margin-top: 275px;
+  font-size: 48px;
+  text-align: center;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 36px;
+  margin: 90px 0;
+}
+
+main ul {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+main ul li {
+  padding: 20px 0;
+  border-bottom: #000000 1px solid;
+}
+
+main ul li .news {
+  border: 1px solid #000000;
+  padding: 5px 8px;
+  margin: 0 30px;
+}
+
+main ul a {
+  color: #000000;
+  text-decoration: none;
+}
+
+main .list {
+  margin: 80px 0 180px 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+main .list a {
+  padding: 12px 40px;
+  border: 1px #000000 solid;
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+}
+
+main .caseStudy-contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .caseStudy-contents .caseStudy-content {
+  text-align: center;
+}
+
+main .caseStudy-contents .caseStudy-content img {
+  width: 430px;
+}
+
+main .caseStudy-contents .caseStudy-content h3 {
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+main .caseStudy-contents .caseStudy-content p {
+  font-size: 14px;
+  margin: 15px 0;
+}
+
+main .caseStudy-contents .caseStudy-content .detail {
+  width: 300px;
+}
+
+main .banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .banner a {
+  max-width: calc(100%/3);
+}
+
+main .banner img {
+  width: 100%;
+}
+
+footer {
+  background: #000000;
+}
+
+footer p {
+  color: #FFF;
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 18px;
+}
+
+footer .footer-nav {
+  max-width: 1100px;
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+footer .footer-nav img {
+  height: 39px;
+}
+
+footer nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+footer nav ul li {
+  padding: 0 30px;
+}
+
+@media screen and (max-width: 960px) {
+  header {
+    height: 342px;
+  }
+  header .header-nav {
+    max-width: 960px;
+  }
+  header .header-nav img {
+    height: 26px;
+    margin-right: 20px;
+  }
+  header .header-nav .sp-menu {
+    display: block;
+  }
+  header p {
+    margin-top: 113px;
+    font-size: 24px;
+  }
+  nav {
+    display: none;
+  }
+  main h2 {
+    margin: 50px 0 30px 0;
+    font-size: 24px;
+  }
+  main ul {
+    margin: 0 20px;
+  }
+  main ul li .news-span {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+  main ul li .news-span .news {
+    font-size: 11px;
+  }
+  main .caseStudy .list {
+    margin-bottom: 110px;
+    margin-top: 0;
+  }
+  main .caseStudy h2 {
+    margin-top: 100px;
+  }
+  main .caseStudy .caseStudy-contents {
+    padding: 0 20px;
+    display: block;
+  }
+  main .caseStudy .caseStudy-contents .caseStudy-content {
+    display: block;
+    text-align: center;
+  }
+  main .caseStudy .caseStudy-contents .caseStudy-content img {
+    width: 100%;
+  }
+  main .caseStudy .caseStudy-contents .caseStudy-content h3 {
+    font-size: 20px;
+    margin-top: 30px;
+  }
+  main .caseStudy .caseStudy-contents .caseStudy-content p {
+    font-size: 12px;
+    margin: 15px 0;
+  }
+  main .caseStudy .caseStudy-contents .caseStudy-content .detail {
+    width: 300px;
+    margin-bottom: 50px;
+  }
+  main .banner {
+    display: block;
+  }
+  footer .footer-nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-top: 32px;
+    padding-bottom: 20px;
+  }
+  footer .footer-nav img {
+    margin-top: 29px;
+  }
+  footer .footer-nav nav {
+    display: block;
+  }
+  footer .footer-nav ul {
+    display: block;
+    text-align: center;
+  }
+  footer .footer-nav ul li {
+    margin-bottom: 21px;
+  }
+  footer .footer-nav a {
+    text-decoration: none;
+    color: #FFF;
+    text-align: center;
+  }
+  footer p {
+    padding-bottom: 15px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
